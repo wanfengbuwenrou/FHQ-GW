@@ -3,7 +3,7 @@
     <!-- 大图 -->
     <div class="pic">
       <img
-        src="https://s.cn.bing.net/th?id=OIP-C.nRlAFygdctTCHmIWN7GxRwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+        src="https://tse2-mm.cn.bing.net/th/id/OIP-C.zzH9VcFovJXG0LI_91kEaQHaEK?w=287&h=180&c=7&r=0&o=5&pid=1.7"
         alt=""
       />
     </div>

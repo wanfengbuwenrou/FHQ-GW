@@ -5,9 +5,9 @@
         <div>
           <img src="" alt="" />
         </div>
-        <div>孵化器</div>
+        <div>元蚁科技孵化器官网</div>
       </div>
-      <div class="col center">
+      <div id="show1" class="col center">
         <el-menu
           :default-active="activeIndex"
           class="el-menu-demo"
@@ -36,8 +36,12 @@
           <el-menu-item index="/total/incubation">孵化服务</el-menu-item>
         </el-menu>
       </div>
-      <div class="col right">登陆</div>
+      <div class="col right" @click="show" :class="{}">登陆</div>
     </div>
+    <!-- <div>
+      <div>孵化器服务</div>
+      <div>图标</div>
+    </div> -->
   </div>
 </template>
 
@@ -62,6 +66,14 @@ export default {
     goaboutme() {
       this.$router.push("/total/aboutme");
     },
+    show(){
+      let a=document.getElementById('show1')
+      let left=document.getElementsByClassName('left')
+      let right=document.getElementsByClassName('right')
+     $(a).css("display","flex")
+     $(left).css('display',"none")
+     $(right).css('display',"none")
+    }
   },
   watch: {},
 };
