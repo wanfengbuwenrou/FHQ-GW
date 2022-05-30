@@ -44,56 +44,5 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-.nav {
-  background-color: rgb(230, 227, 227);
-  .pic {
-    width: 100%;
-    height: 450px;
-    > img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .pro {
-    text-align: center;
-    div {
-      margin: 15px 0;
-    }
-    > div:first-child {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    > div:last-child {
-      font-size: 14px;
-      color: #6d6464;
-    }
-  }
-  .text {
-    background-color: #fff;
-    margin: 0px 40px;
-    > div {
-      padding: 40px 80px;
-      p {
-        line-height: 30px;
-        font-size: 14px;
-        text-indent: 40px;
-      }
-      >div{
-        font-weight: bold;
-        margin: 10px 0;
-      }
-    }
-
-  }
-  .pic2 {
-    margin: 40px 40px;
-    > div {
-      height: 500px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
+@import '../assets/style/Aboutme.scss'
 </style>

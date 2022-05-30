@@ -85,50 +85,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .contentnav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px 100px;
-    }
-    .one {
-      > div:first-child {
-        font-size: 20px;
-        > span:first-child {
-          font-weight: 600;
-          display: inline-block;
-          padding: 20px 20px 20px 0;
-        }
-        > span:last-child {
-          color: rgb(230, 227, 227);
-        }
-      }
-      > div:nth-child(2) {
-        line-height: 30px;
-        font-size: 14px;
-      }
-      > div:last-child {
-        color: #36d;
-        float: right;
-      }
-    }
-    .two {
-      div {
-        width: 500px;
-        height: 400px;
-        margin: 0 auto;
-        > img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .f1 {
-      flex-basis: 56%;
-    }
-    .f2 {
-      flex-basis: 42%;
-    }
-  
-
+@import '../assets/style/Index.scss'
 </style>

@@ -1,0 +1,92 @@
+@media (min-width:1024px) {
+    .container {
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      z-index: 999;
+      background-color: #fff;
+      width: 100%;
+      .row {
+        display: flex;
+        align-items: center;
+        .left {
+          display: flex;
+          flex: 4;
+          justify-content: center;
+          color: #36d;
+        }
+        .center {
+          display: flex;
+          flex: 5;
+          align-items: center;
+          .el-submenu.is-opened > .el-submenu__title .el-submenu__icon-arrow {
+            display: none;
+          }
+          .el-menu-demo {
+            border-bottom: none;
+            .el-menu-item {
+              border-bottom: none;
+              .el-submenu > .tempalte > .el-icon-arrow-down:before {
+                display: none;
+              }
+            }
+            .el-icon-arrow-down:before {
+              content: none;
+            }
+          }
+          .el-menu--collapse .el-menu .el-submenu > .el-menu--popup {
+            min-width: 40px !important;
+          }
+        }
+        .right {
+          flex: 1;
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .container {
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      z-index: 999;
+      background-color: #fff;
+      width: 1024px;
+      .row {
+        display: flex;
+        align-items: center;
+        .left {
+          display: flex;
+          flex: 2;
+          justify-content: center;
+          color: #36d;
+        }
+        .center {
+          display: flex;
+          flex: 6;
+          align-items: center;
+          .el-submenu.is-opened > .el-submenu__title .el-submenu__icon-arrow {
+            display: none;
+          }
+          .el-menu-demo {
+            border-bottom: none;
+            .el-menu-item {
+              border-bottom: none;
+              .el-submenu > .tempalte > .el-icon-arrow-down:before {
+                display: none;
+              }
+            }
+            .el-icon-arrow-down:before {
+              content: none;
+            }
+          }
+          .el-menu--collapse .el-menu .el-submenu > .el-menu--popup {
+            min-width: 40px !important;
+          }
+        }
+        .right {
+          flex: 2;
+        }
+      }
+    }
+  }

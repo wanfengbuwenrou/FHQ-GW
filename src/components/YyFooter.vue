@@ -47,37 +47,5 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-.container-fluid {
-  background-color: rgb(72, 69, 69);
-  color: #fff;
-  .row-fluid {
-    .row-fluid {
-      display: flex;
-      justify-content: space-between;
-      .one {
-        flex: 4;
-        ul > li {
-          padding: 5px 0;
-          list-style-type: none;
-        }
-      }
-      .two {
-        flex: 6;
-
-        ul > li:first-child {
-          font-size: 20px;
-        }
-        ul > li {
-          padding: 5px 0;
-          list-style-type: none;
-        }
-      }
-    }
-  }
-  .span6 {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 60px 0;
-  }
-}
+@import '../assets/style/Footer.scss';
 </style>
