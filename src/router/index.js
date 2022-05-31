@@ -12,28 +12,51 @@ const routes = [
     path: "/index",
     name: "index",
     component: () => import("../views/Index.vue"),
+    children:[
+      // 关于我们
+      {
+        path: "aboutme",
+        name: "aboutme",
+        component: () => import("../views/Aboutme.vue"),
+      },
+    ]
   },
   {
     path: "/total",
     name: "total",
     component: () => import("../views/Total.vue"),
     children: [
+      // 财务页面
       {
-        path: "aboutme",
-        name: "aboutme",
-        component: () => import("../views/Aboutme.vue"),
+        path: 'financial',
+        name: 'financial',
+        component: () => import('../views/Financial.vue'),
       },
+      // 审计页面
       {
-        path: "inforpolicy",
-        name: "inforpolicy",
-        component: () => import("../views/Inforpolicy.vue"),
+        path: 'audit',
+        name: 'audit',
+        component: () => import('../views/Audit.vue'),
       },
+      // 人才推荐
       {
-        path: "incubation",
-        name: "incubation",
-        component: () => import("../views/Incubation.vue"),
+        path: 'talent',
+        name: 'talent',
+        component: () => import('../views/Talent.vue'),
+      },
+      // 软件开发
+      {
+        path: 'software',
+        name: 'software',
+        component: () => import('../views/Software.vue'),
       },
     ],
+  },
+  // 资讯政策
+  {
+    path: "/incubation",
+    name: "incubation",
+    component: () => import("../views/Incubation.vue"),
   },
 ]
 

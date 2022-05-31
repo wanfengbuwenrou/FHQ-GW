@@ -1,11 +1,12 @@
 <template>
-  <div class="nav">
+  <div class="aboutme">
     <!-- 大图 -->
     <div class="pic">
-      <img
-        src="https://tse2-mm.cn.bing.net/th/id/OIP-C.zzH9VcFovJXG0LI_91kEaQHaEK?w=287&h=180&c=7&r=0&o=5&pid=1.7"
-        alt=""
-      />
+      <el-image
+      style="width: 100%; height: 450px"
+      :src="url"
+      
+></el-image>
     </div>
     <div class="pro">
       <div>公司介绍</div>
@@ -30,10 +31,11 @@
     </div>
     <div class="pic2">
       <div>
-        <img
-          src="https://s.cn.bing.net/th?id=OIP-C.nRlAFygdctTCHmIWN7GxRwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
-          alt=""
-        />
+        <el-image
+      style="width: 100%; height: 450px"
+      :src="url"
+      
+></el-image>
       </div>
     </div>
   </div>
@@ -44,5 +46,5 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-@import '../assets/style/Aboutme.scss'
+@import '../assets/style/Aboutme.scss';
 </style>

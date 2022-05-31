@@ -41,7 +41,7 @@ export default {
         //设置自动播放间隔时间
         autoplay: 3000,
         // 轮播效果,默认为平滑轮播
-        effect: "cube",
+        effect: "fade",
         //分页器
         pagination: ".swiper-pagination",
         //前进后退按钮

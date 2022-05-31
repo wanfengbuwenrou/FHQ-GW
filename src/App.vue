@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <router-view></router-view>
   </div>
 </template>
@@ -9,9 +9,11 @@ export default {};
 </script>
 
 <style>
-* {
-  padding: 0;
-  margin: 0;
+.container {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
   box-sizing: border-box;
+  cursor: pointer;
 }
 </style>
