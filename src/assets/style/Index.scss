@@ -1,87 +1,12 @@
 @media (min-width: 1024px) {
   .f3 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 30px 100px;
-      }
-      .one {
-        flex-basis: 56%;
-        > div:first-child {
-          font-size: 20px;
-          > span:first-child {
-            font-weight: 600;
-            display: inline-block;
-            padding: 20px 20px 20px 0;
-          }
-          > span:last-child {
-            color: rgb(230, 227, 227);
-          }
-        }
-        > div:nth-child(2) {
-          line-height: 30px;
-          font-size: 14px;
-          height: 350px;
-          overflow: hidden;
-        }
-        > div:last-child {
-          color: #36d;
-          float: right;
-          padding-top: 10px;
-
-        }
-      }
-      .two {
-        flex-basis: 42%;
-        div {
-          margin: 0 auto;
-        }
-      }
-}
-@media (max-width: 1024px) {
-  .f3 {
     display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 40px 100px;
-      .one {
-        > div:first-child {
-          font-size: 20px;
-          > span:first-child {
-            font-weight: 600;
-            display: inline-block;
-            padding: 20px 20px 20px 0;
-          }
-          > span:last-child {
-            color: rgb(230, 227, 227);
-          }
-        }
-        > div:nth-child(2) {
-          line-height: 30px;
-          font-size: 14px;
-          // height: 400px;
-          overflow: hidden;
-        }
-        > div:last-child {
-          color: #36d;
-          float: right;
-        }
-      }
-      .two {
-        div {
-          margin: 0 auto;
-        }
-      }
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 100px;
   }
-}
-
-.f4{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  .top{
-    margin: 0 100px;
+  .one {
+    flex-basis: 56%;
     > div:first-child {
       font-size: 20px;
       > span:first-child {
@@ -93,52 +18,339 @@
         color: rgb(230, 227, 227);
       }
     }
-  }
-  .main1>div>div:first-child{
-    padding: 40px 100px;
-    margin: 0 auto;
-    line-height: 20px;
-    color: #fff;
-    text-align: center;
-  }
-  .main1>div>div:not(:first-child){
-    display: flex;
-    justify-content: space-around;
-    >div{
-    border: 1px solid red;
-      width: 80px;
-      height: 80px;
+    > div:nth-child(2) {
+      line-height: 30px;
+      font-size: 14px;
+      height: 350px;
+      overflow: hidden;
+    }
+    > div:last-child {
+      color: #36d;
+      float: right;
+      padding-top: 10px;
     }
   }
-  .main1>div>div:nth-child(2){
-    display: flex;
-    justify-content: start;
-    padding: 10px 150px;
-    >div{
-      margin: 0 20px;
+  .two {
+    flex-basis: 42%;
+    margin-top: 80px;
+    div {
+      margin: 0 auto;
     }
-  }
-  .main1>div>div:nth-child(3){
-    display: flex;
-    justify-content: end;
-    padding: 50px 150px;
-    >div{
-      margin: 0 20px;
-    }
-  }
-  .main2{
-    >div{
-      border: 1px solid red;
-      display: flex;
-
-    }
-  }
-  .el-main{
-    // height: 400px;
-    background: url("https://s.cn.bing.net/th?id=OIP-C.2rQ25qnSMQHXGcHz3Rp2pAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
-    background-repeat: no-repeat;
-    background-size: cover;
-
   }
 
+  .f4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    .top {
+      margin: 1rem 1rem;
+
+      > div:first-child {
+        font-size: 2rem;
+        > span:first-child {
+          font-weight: 600;
+          display: flex;
+        }
+        > span:last-child {
+          color: rgb(230, 227, 227);
+        }
+      }
+    }
+    .main1 > div > div:first-child {
+      line-height: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    // 孵化服务12张图
+    .main1 {
+      background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115546_0051de9a7c27a608260989b53287df4b11.png");
+      background-repeat: no-repeat;
+      opacity: 1;
+      background-size: cover;
+      > div {
+        > div:nth-child(2) {
+          display: flex;
+          flex-wrap: wrap;
+          // margin-top: 8rem;
+          justify-content: start;
+          width: 100%;
+          // margin: 0 ;
+          > div {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            justify-content: flex-start;
+            width: 11%;
+            height: 20rem;
+            margin: 1rem 2rem;
+            > div {
+              width: 190px;
+
+              height: 170px;
+              > img {
+                width: 100%;
+                height: 100%;
+                padding: 40px 40px 10px 40px;
+              }
+            }
+            > div {
+              text-align: center;
+              line-height: -10px;
+              font-size: 2rem;
+            }
+          }
+        }
+        >div:nth-child(3){
+          display: flex;
+            .top{
+              width: 8px;
+              height: 40px;
+              margin: 0;
+              background-color: rgb(249,105,7);
+          }
+          .bottom{
+            width: 8px;
+            height: 40px;
+            margin: 0;
+            background-color: rgb(249,105,7);
+        }
+          .hr{
+            height: 5px;
+            background-color: rgb(249,105,7);
+            margin: 0;
+          }
+        }
+        > div:nth-child(4) {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 8rem;
+          justify-content: end;
+          width: 100%;
+          margin: 0 3rem;
+          > div {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            justify-content: flex-end;
+            width: 11%;
+            height: 20rem;
+            margin: 1rem 2rem;
+            > div {
+              width: 190px;
+
+              height: 170px;
+              > img {
+                width: 100%;
+                height: 100%;
+                padding: 40px 40px 10px 40px;
+              }
+            }
+
+            > div {
+              text-align: center;
+              line-height: -10px;
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .el-main {
+      
+    }
+    .main2 {
+      background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115606_c9f2d16c165c230dbfb4d13c908290d632.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      > div {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        div {
+          display: flex;
+          justify-content: space-around;
+          width: 25%;
+          height: 130px;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  .f5 {
+    .top {
+      margin: 1rem 1rem;
+
+      > div:first-child {
+        font-size: 2rem;
+        > span:first-child {
+          font-weight: 600;
+          display: flex;
+        }
+        > span:last-child {
+          color: rgb(230, 227, 227);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .f3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.5rem 2rem;
+    .one {
+      height: 40rem;
+      > div:first-child {
+        font-size: 2rem;
+        > span:first-child {
+          font-weight: 600;
+          display: flex;
+        }
+        > span:last-child {
+          color: rgb(230, 227, 227);
+        }
+      }
+      > div:nth-child(2) {
+        line-height: 30px;
+        font-size: 1.5rem;
+        overflow: hidden;
+      }
+      > div:last-child {
+        color: #36d;
+        float: right;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .f4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    .top {
+      margin: 1rem 1rem;
+
+      > div:first-child {
+        font-size: 2rem;
+        > span:first-child {
+          font-weight: 600;
+          display: flex;
+        }
+        > span:last-child {
+          color: rgb(230, 227, 227);
+        }
+      }
+    }
+    .main1 > div > div:first-child {
+      line-height: 20px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .main1 {
+      background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115546_0051de9a7c27a608260989b53287df4b11.png");
+      background-repeat: no-repeat;
+      opacity: 1;
+      background-size: cover;
+      > div {
+        > div:nth-child(2) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          width: 100%;
+          > div {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            width: 21%;
+            height: 160px;
+            margin: 0 2rem;
+            > div {
+              width: 100px;
+              height: 80px;
+              > img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            > div {
+              text-align: center;
+              font-size: 1.5rem;
+              margin-top: 10px;
+            }
+          }
+        }
+        > div:nth-child(4) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 100%;
+          > div {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            width: 21%;
+            height: 160px;
+            margin: 0 2rem;
+            > div {
+              width: 100px;
+              height: 80px;
+              > img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            > div {
+              text-align: center;
+              font-size: 1.5rem;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .main2 {
+      background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115606_c9f2d16c165c230dbfb4d13c908290d632.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      > div {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        div {
+          display: flex;
+          justify-content: space-around;
+          width: 45%;
+          height: 100px;
+          margin: 10px 0; 
+          >img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .f5 {
+    .top {
+      margin: 1rem 1rem;
+      > div:first-child {
+        font-size: 2rem;
+        > span:first-child {
+          font-weight: 600;
+          display: flex;
+        }
+        > span:last-child {
+          color: rgb(230, 227, 227);
+        }
+      }
+    }
+  }
 }

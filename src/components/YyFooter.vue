@@ -22,8 +22,14 @@
               </ul>
               <ul class="unstyled">
                 <li>合作企业</li>
+                <li>合作企业</li>
+                <li>合作企业</li>
+                <li>合作企业</li>
               </ul>
               <ul class="unstyled">
+                <li>资讯政策</li>
+                <li>资讯政策</li>
+                <li>资讯政策</li>
                 <li>资讯政策</li>
               </ul>
               <ul class="unstyled">
@@ -47,5 +53,5 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-@import '../assets/style/Footer.scss';
+@import "../assets/style/Footer.scss";
 </style>

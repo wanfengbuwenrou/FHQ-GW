@@ -5,13 +5,22 @@
     <div class="swiper-wrapper">
       <!-- 每个节点 -->
       <div class="swiper-slide">
-        <img src="https://s.cn.bing.net/th?id=OIP-C.nRlAFygdctTCHmIWN7GxRwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片1" />
+        <img
+          src="../assets/images/2.png"
+          alt="图片1"
+        />
       </div>
       <div class="swiper-slide">
-        <img src="https://s.cn.bing.net/th?id=OIP-C.P3NSGTdAYdyqy5zJpb5QXQHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片2" />
+        <img
+          src="../assets/images/3.png"
+          alt="图片2"
+        />
       </div>
       <div class="swiper-slide">
-        <img src="https://s.cn.bing.net/th?id=OIP-C.qQKiZmNZqM39tKUHPUAkIwHaE5&w=307&h=203&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="图片3" />
+        <img
+          src="../assets/images/1.png"
+          alt="图片3"
+        />
       </div>
     </div>
 
@@ -57,17 +66,35 @@ export default {
 
 <style scoped lang="scss">
 @import "../../node_modules/swiper/dist/css/swiper.min.css";
-.swiper-container {
-  width: 100%;
-  height: 550px;
-}
+@media (min-width: 1024px){
 
-.swiper-slide {
-  width: 100%;
-  object-fit: cover;
-  img{
+  .swiper-container {
+    width: 100%;
+    height: 60rem;
+  }
+  
+  .swiper-slide {
+    width: 100%;
+    object-fit: cover;
+    img {
       height: 100%;
       width: 100%;
+    }
+  }
+}
+@media (max-width: 1024px){
+   .swiper-container {
+    width: 100%;
+    height: 40rem;
+  }
+  
+  .swiper-slide {
+    width: 100%;
+    object-fit: cover;
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 </style>

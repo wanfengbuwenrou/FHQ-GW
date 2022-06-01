@@ -13,13 +13,14 @@ const routes = [
     name: "index",
     component: () => import("../views/Index.vue"),
     children:[
-      // 关于我们
-      {
-        path: "aboutme",
-        name: "aboutme",
-        component: () => import("../views/Aboutme.vue"),
-      },
+      
     ]
+  },
+  // 关于我们
+  {
+    path: "/aboutme",
+    name: "aboutme",
+    component: () => import("../views/Aboutme.vue"),
   },
   {
     path: "/total",

@@ -1,7 +1,6 @@
 <template>
   <div>
     <yy-header></yy-header>
-    <router-view></router-view>
     <!-- 轮播图 -->
     <yy-swiper></yy-swiper>
     <el-container class="f3">
@@ -11,28 +10,12 @@
           <span>ABOUT US</span>
         </div>
         <div>
-          北京奥宇科技企业孵化器有限责任公司成立于2002年5月21日，注册资金12亿元，公司地址位
-          于北京市大兴区金星路12号院2号楼。公司运营管理的奥宇科技英巢园区以电子信息、文化创意
-          和节能环保为主要孵化方向，园区占地面积约40亩，总建筑面积约9万平方米，其中孵化总面积
-          约5万平方米，入驻企业共计300余家。奥宇孵化器是国家科技部火炬中心认定的“国家级解化
-          器和“国家级众创空间”，国家工信部认定的广国家小型微型企业创业创新示范基地”，目
-          前是大兴区唯——家同时获得国家科技部和国家工信部认定为国家级资质的标杆孵化器。经过
-          不断地摸索和深化，奥宇孵化器打造了“创业辅导、投融资、科技支持”和“基础孵化”的孵
-          化服务模式，为创业团队、初创企业和高成长企业提供有针对性的孵化服务，形成“场地+资金
-          +专业服务+科技中介，的运营模式。奥宇孵化器通过资源整合，聚集各类创新要索，为创业企
-          业提供全方位、多层次和多元化的一条龙服务，营造良好的创新创业生态环境，形成组织体系
-          网络化创业服务专业化、服务体系规范化的发展局面，致力打造京南区域标杆孵化器。
+          {{Aboutme}}
         </div>
         <div @click="goaboutme">了解更多></div>
       </el-main>
       <el-main class="two">
-        <div>
-          <el-image
-      style="width: 100%; height: 450px"
-      :src="url"
-      lazy
-></el-image>
-        </div>
+        <img style="width: 100%; height: 35rem" src="../assets/images/4.png" />
       </el-main>
     </el-container>
     <!-- 孵化服务 -->
@@ -46,13 +29,89 @@
       <el-main class="main1">
         <div>
           <div>{{ FhFw }}</div>
+          <!-- 上边6个 -->
           <div>
             <div>
-              <img src="" alt="">
+              <div>
+                <img src="../assets/images/caishui.png" alt="" />
+              </div>
+              <div>技术开发</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/dingzhi.png" alt="" />
+              </div>
+              <div>APP定制</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/jishu.png" alt="" />
+              </div>
+              <div>技术转让</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/kaifa.png" alt="" />
+              </div>
+              <div>技术咨询</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/rencaituijian.png" alt="" />
+              </div>
+              <div>人才推荐</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/caishui.png" alt="" />
+              </div>
+              <div>财税咨询</div>
             </div>
           </div>
+          <!-- 分割线 -->
           <div>
-            <div v-for="a in 6" :key="a">2</div>
+            <!-- <div class="top" v-for="a in 6" :ksey="a"></div> -->
+            <el-divider class="hr"> </el-divider>
+            <!-- <div class="bottom" v-for="b in 6" :key="b"></div> -->
+          </div>
+          <!-- 下面六个 -->
+          <div>
+            <div>
+              <div>
+                <img src="../assets/images/lianxi.png" alt="" />
+              </div>
+              <div>税收筹划</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/renli.png" alt="" />
+              </div>
+              <div>审计服务</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/shenji.png" alt="" />
+              </div>
+              <div>人力资源服务</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/shui.png" alt="" />
+              </div>
+              <div>评估模型</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/caishui.png" alt="" />
+              </div>
+              <div>税务管理</div>
+            </div>
+            <div>
+              <div>
+                <img src="../assets/images/dingzhi.png" alt="" />
+              </div>
+              <div>其他服务</div>
+            </div>
           </div>
         </div>
       </el-main>
@@ -67,7 +126,56 @@
       </el-header>
       <el-main class="main2">
         <div>
-          <div v-for="a in 6" :key="a">3</div>
+          <div>
+            <img src="../assets/images/a.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/b.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/d.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/hezuo1.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/c.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/e.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/f.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/g.png" alt="" />
+          </div>
+        </div>
+      </el-main>
+    </el-container>
+    <!-- 荣誉资质 -->
+    <el-container class="f5">
+      <el-header class="top">
+        <div>
+          <span>荣誉资质</span>
+          <span>HONORARY QUALIFICATION</span>
+        </div>
+      </el-header>
+      <el-main>
+        <div>
+          <template>
+            <el-carousel :autoplay="false">
+              <el-carousel-item>
+                <img src="" alt="">
+              </el-carousel-item>
+              <el-carousel-item>
+                <img src="" alt="">
+              </el-carousel-item>
+              <el-carousel-item>
+                <img src="" alt="">
+              </el-carousel-item>
+            </el-carousel>
+          </template>
         </div>
       </el-main>
     </el-container>
@@ -86,12 +194,13 @@ export default {
   data() {
     return {
       FhFw: "针对科技企业孵化，孵化器对入孵的企业在提供基础服务的同时，开展了多样化的增值服务，建设了以软件服务，财税服务，人力资源服务，企业诊断服务，创业培训服务，审计服务，企业财务管理服务，投融资服务，市场推广服务，创业服务等多种服务为内容的孵化服务体系",
+      Aboutme:"北京奥宇科技企业孵化器有限责任公司成立于2002年5月21日，注册资金12亿元，公司地址位于北京市大兴区金星路12号院2号楼。公司运营管理的奥宇科技英巢园区以电子信息、文化创意和节能环保为主要孵化方向，园区占地面积约40亩，总建筑面积约9万平方米，其中孵化总面积约5万平方米，入驻企业共计300余家。奥宇孵化器是国家科技部火炬中心认定的“国家级解化器和“国家级众创空间”，国家工信部认定的广国家小型微型企业创业创新示范基地”，目前是大兴区唯——家同时获得国家科技部和国家工信部认定为国家级资质的标杆孵化器。经过不断地摸索和深化，奥宇孵化器打造了“创业辅导、投融资、科技支持”和“基础孵化”的孵化服务模式，为创业团队、初创企业和高成长企业提供有针对性的孵化服务，形成“场地+资金+专业服务+科技中介，的运营模式。奥宇孵化器通过资源整合，聚集各类创新要索，为创业企业提供全方位、多层次和多元化的一条龙服务，营造良好的创新创业生态环境，形成组织体系 网络化创业服务专业化、服务体系规范化的发展局面，致力打造京南区域标杆孵化器。",
     };
   },
   methods: {
-    goaboutme(){
-      this.$router.push('/index/aboutme')
-    }
+    goaboutme() {
+      this.$router.push("/aboutme");
+    },
   },
 };
 </script>

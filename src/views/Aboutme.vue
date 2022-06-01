@@ -1,12 +1,9 @@
 <template>
   <div class="aboutme">
+    <YyHeader></YyHeader>
     <!-- 大图 -->
     <div class="pic">
-      <el-image
-      style="width: 100%; height: 450px"
-      :src="url"
-      
-></el-image>
+      <img style="width: 100%; height: 45rem" src="../assets/images/2.png" />
     </div>
     <div class="pro">
       <div>公司介绍</div>
@@ -31,20 +28,19 @@
     </div>
     <div class="pic2">
       <div>
-        <el-image
-      style="width: 100%; height: 450px"
-      :src="url"
-      
-></el-image>
+        <img style="width: 100%; height: 400px" src="../assets/images/3.png" />
       </div>
     </div>
+    <yy-footer></yy-footer>
   </div>
 </template>
 
 <script>
-export default {};
+import YyHeader from "@/components/YyHeader.vue";
+import YyFooter from '@/components/YyFooter.vue';
+export default { components: { YyHeader, YyFooter } };
 </script>
 
 <style scoped lang="scss">
-@import '../assets/style/Aboutme.scss';
+@import "../assets/style/Aboutme.scss";
 </style>

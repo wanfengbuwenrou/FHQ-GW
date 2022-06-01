@@ -3,26 +3,26 @@
     .pro {
       text-align: center;
       div {
-        margin: 15px 0;
+        margin: 2rem 0;
       }
       > div:first-child {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 2rem;
       }
       > div:last-child {
-        font-size: 14px;
+        font-size: 1.5rem;
         color: #6d6464;
       }
     }
     .text {
       background-color: #fff;
-      margin: 0px 40px;
+      margin: 0rem 2rem;
       > div {
-        padding: 40px 80px;
+        padding: 4rem 4rem;
         p {
           line-height: 30px;
-          font-size: 14px;
-          text-indent: 40px;
+          font-size: 1.5rem;
+          text-indent: 5rem;
         }
         >div{
           font-weight: bold;
@@ -32,6 +32,6 @@
   
     }
     .pic2 {
-      margin: 40px 40px;
+      margin: 4rem 2rem;
     }
   }

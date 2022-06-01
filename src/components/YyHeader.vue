@@ -1,9 +1,13 @@
 <template>
   <div class="header">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+       <!-- 抽屉开关 -->
+      <div class="p-icon" @click="drawer = true">
+        <i class="el-icon-s-operation"></i>
+      </div>
       <div class="col- left">
         <div>
-          <img src="" alt="" />
+          <img src="../assets/images/logo.png" alt="" />
         </div>
         <div @click="goindex">元蚁科技孵化器官网</div>
       </div>
@@ -67,6 +71,27 @@
         </el-menu>
       </div>
       <div class="col right">登陆</div>
+     <!-- 登陆图标 -->
+      <div class="p-icon">
+        <i class="el-icon-user"></i>
+      </div>
+      <!-- 抽屉 -->
+      <el-drawer
+        :visible.sync="drawer"
+        direction="ltr"
+        :modal="false"
+        class="drawer"
+        :before-close="handleClose"
+        :show-close="false"
+>
+                <div @click="goindex">首页</div>
+                <div>软件服务</div>
+                <div>人才服务</div>
+                <div>审计服务</div>
+                <div>财税服务</div>
+                <div>资讯政策</div>
+
+      </el-drawer>
     </div>
     <!-- <div>
       <div>孵化器服务</div>
@@ -80,7 +105,7 @@ export default {
   data() {
     return {
       activeIndex: "",
-      activeIndex1: "",
+      drawer: false,
     };
   },
   mounted() {
@@ -90,8 +115,11 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
-      // console.log(key);
+      console.log(keyPath);
       this.activeIndex = keyPath + "";
+    },
+    handleClose(done) {
+      this.drawer = false;
     },
     goindex() {
       this.$router.push("/index");
