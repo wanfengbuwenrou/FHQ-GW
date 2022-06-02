@@ -11,37 +11,30 @@
       align-items: center;
       .left {
         display: flex;
-        flex: 3;
+        flex: 5;
         justify-content: center;
         align-items: center;
         color: #36d;
+        font-size: 22px;
       }
       .center {
         display: flex;
         justify-content: space-evenly;
-        flex: 6;
+        flex: 5;
         align-items: center;
-        .el-submenu.is-opened > .el-submenu__title .el-submenu__icon-arrow {
-          display: none;
+        .el-submenu__title{
+          font-size: 18px;
         }
-        .el-menu-demo {
-          border-bottom: none;
-          .el-menu-item {
-            border-bottom: none;
-            .el-submenu > .tempalte > .el-icon-arrow-down:before {
-              display: none;
-            }
-          }
+        .el-submenu.is-active .el-submenu__title{
+          border-bottom:0px solid white !important;
+        }
           .el-icon-arrow-down:before {
             content: none;
           }
         }
-        .el-menu--collapse .el-menu .el-submenu > .el-menu--popup {
-          min-width: 40px !important;
-        }
-      }
       .right {
         flex: 1;
+        font-size: 18px;
       }
     }
   }
@@ -69,59 +62,21 @@
         display: none;
       }
       .drawer{
-           >div{
-             text-align: center;
-             line-height: 50px;
-           }     
+        width: 400px;
+          .el-menu{
+            display: flex;
+            flex-direction: column;
+            border-bottom: none;
+          }
+          .el-menu--horizontal>.el-menu-item.is-active{
+            border-bottom:1px solid white !important;
+          }
+            .el-icon-arrow-down:before {
+              content: none;
+            }
       }
     }
     
   }
-  // .header {
-  //   margin:0;
-  //   padding: 0;
-  //   background-color: #fff;
-  //   width: 100%;
-  //   position: fixed;
-  //   z-index: 999;
-  //   .row {
-  //     width: 70rem;
-  //     margin: 0 auto;
-  //     .center {
-  //       height: 60px;
-  //       display: flex;
-  //       justify-content: center;
-  //       .el-submenu.is-opened > .el-submenu__title .el-submenu__icon-arrow {
-  //         display: none;
-  //       }
-  //       .el-menu-demo {
-  //         border-bottom: none;
-  //         .el-menu-item {
-  //           border-bottom: none;
-  //           .el-submenu > .tempalte > .el-icon-arrow-down:before {
-  //             display: none;
-  //           }
-  //         }
-  //         .el-icon-arrow-down:before {
-  //           content: none;
-  //         }
-  //       }
-  //       .el-menu--collapse .el-menu .el-submenu > .el-menu--popup {
-  //         min-width: 40px !important;
-  //       }
-  //     }
-  //     .left {
-  //       display: flex;
-  //       // align-items: center;
-  //       justify-content: center;
-  //       font-size: 18px;
-  //       color: #36d;
-  //       margin: 20px 0;
-  //     }
-  //     .right {
-  //       display: none;
-  //     }
-  //   }
-  // }
 
 }

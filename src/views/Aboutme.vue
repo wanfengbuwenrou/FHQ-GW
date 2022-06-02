@@ -5,6 +5,14 @@
     <div class="pic">
       <img style="width: 100%; height: 45rem" src="../assets/images/2.png" />
     </div>
+    <!-- 面包屑 -->
+    <div class="bread">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item>关于我们</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
+    <!-- 企业介绍 -->
     <div class="pro">
       <div>公司介绍</div>
       <div>服务至上，精益求精</div>
@@ -37,7 +45,7 @@
 
 <script>
 import YyHeader from "@/components/YyHeader.vue";
-import YyFooter from '@/components/YyFooter.vue';
+import YyFooter from "@/components/YyFooter.vue";
 export default { components: { YyHeader, YyFooter } };
 </script>
 

@@ -1,15 +1,30 @@
 <template>
   <div>
-      审计
+    <div class="content">
+      <div class="left">
+        <div>审计</div>
+        <div>审计服务</div>
+        <div>审计服务</div>
+        <div>审计服务</div>
+        <div>审计服务</div>
+      </div>
+      <div class="right">
+        <div>审计服务</div>
+        <div>
+          <div>1.提供的服务内容</div>
+          <div>
+            <img src="../assets/images/linshi.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style scoped lang="scss">
+@import "../assets/style/Total.scss";
 </style>

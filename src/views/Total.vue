@@ -6,26 +6,23 @@
       <img style="width: 100%; height: 40rem" src="../assets/images/1.png" />
     </div>
     <!-- 导航 -->
-    <!-- <el-menu
-      :default-active="activeIndex"
+    <el-container class="f2">
+      <el-main>
+         <el-menu
+      :default-active="$route.path"
       class="el-menu-demo"
       mode="horizontal"
       @select="handleSelect"
       text-color="black"
-      active-text-color="#36d"
+      active-text-color="red"
       router
+      v-for="(item,i) in menu"
+      :key="i"
     >
-      <el-menu-item index="/total/financial">财税</el-menu-item>
-      <el-menu-item index="/total/audit">审计</el-menu-item>
-      <el-menu-item index="/total/talent">人才推荐</el-menu-item>
-      <el-menu-item index="/total/software">软件开发</el-menu-item>
-    </el-menu> -->
-    <div class="tag">
-      <div>财税</div>
-      <div>审计</div>
-      <div>人才推荐</div>
-      <div>软件开发</div>
-    </div>
+      <el-menu-item :index="item.path">{{item.title}}</el-menu-item>
+    </el-menu>
+      </el-main>
+    </el-container>
     
     <router-view></router-view>
     <BackTop></BackTop>
@@ -42,6 +39,12 @@ export default {
   data() {
     return {
       activeIndex: '',
+      menu:[
+        {title:'财税',path:'/total/financial'},
+        {title:'审计',path:'/total/audit'},
+        {title:'人才推荐',path:'/total/talent'},
+        {title:'软件开发',path:'/total/software'},
+      ]
     }
   },
   mounted() {
@@ -52,6 +55,7 @@ export default {
   methods: {
     handleSelect(key,keyPath) {
       this.activeIndex = keyPath + "";
+      console.log(this.activeIndex);
     }
   },
 };

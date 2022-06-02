@@ -1,0 +1,50 @@
+.f2 {
+    .el-main {
+      display: flex;
+      justify-content: center;
+      .el-menu-demo {
+        display: flex;
+        justify-content: center;
+        border-bottom: none;
+
+        .el-menu-item {
+          border: 1px solid rgb(192, 192, 192) !important;
+          width: 150px;
+          text-align: center;
+          border-top: 0px;
+        }
+        margin-bottom: 60px;
+      }
+    }
+  }
+  .f3 {
+    .el-header {
+      font-size: 3rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    .el-main {
+      .box-card {
+        padding: 30px;
+        > div {
+          > div > div {
+            padding: 5px;
+          }
+          >div>div:first-child{
+              font-size: 20px;
+              font-weight: bold
+          }
+          >div>div:nth-child(3){
+              margin: 10px 0;
+          }
+          >div>div:nth-child(4){
+              border-bottom: 1px dotted rgb(185, 185, 185);
+              margin:  10px 0;
+          }
+        }
+      }
+      .block{
+        text-align: center;
+      }
+    }
+  }

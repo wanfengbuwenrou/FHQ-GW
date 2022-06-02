@@ -5,22 +5,13 @@
     <div class="swiper-wrapper">
       <!-- 每个节点 -->
       <div class="swiper-slide">
-        <img
-          src="../assets/images/2.png"
-          alt="图片1"
-        />
+        <img src="../assets/images/banner1.png" alt="图片1" />
       </div>
       <div class="swiper-slide">
-        <img
-          src="../assets/images/3.png"
-          alt="图片2"
-        />
+        <img src="../assets/images/banner2.png" alt="图片2" />
       </div>
       <div class="swiper-slide">
-        <img
-          src="../assets/images/1.png"
-          alt="图片3"
-        />
+        <img src="../assets/images/banner3.png" alt="图片3" />
       </div>
     </div>
 
@@ -66,13 +57,12 @@ export default {
 
 <style scoped lang="scss">
 @import "../../node_modules/swiper/dist/css/swiper.min.css";
-@media (min-width: 1024px){
-
+@media (min-width: 1024px) {
   .swiper-container {
     width: 100%;
-    height: 60rem;
+    height: 70rem;
   }
-  
+
   .swiper-slide {
     width: 100%;
     object-fit: cover;
@@ -82,12 +72,12 @@ export default {
     }
   }
 }
-@media (max-width: 1024px){
-   .swiper-container {
+@media (max-width: 1024px) {
+  .swiper-container {
     width: 100%;
     height: 40rem;
   }
-  
+
   .swiper-slide {
     width: 100%;
     object-fit: cover;

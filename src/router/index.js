@@ -59,12 +59,20 @@ const routes = [
     name: "incubation",
     component: () => import("../views/Incubation.vue"),
   },
+  // 最新政策详情
+  {
+    path: '/policydetail',
+    name: 'policydetail',
+    component: () => import('../views/Policydetail.vue'),
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior: () => ({ y: 0 }),
 })
+
 
 export default router

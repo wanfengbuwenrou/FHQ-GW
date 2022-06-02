@@ -1,19 +1,19 @@
 <template>
   <div>
-      <div class="content">
+    <div class="content">
       <div class="left">
-        <div>财税</div>
-        <div>财税咨询</div>
-        <div>税收筹划</div>
-        <div>1</div>
-        <div>2</div>
+        <div>人才推荐</div>
+        <div>人才推荐</div>
+        <div>人才推荐</div>
+        <div>人才推荐</div>
+        <div>人才推荐</div>
       </div>
       <div class="right">
-        <div>财税咨询</div>
+        <div>人才推荐</div>
         <div>
           <div>1.提供的服务内容</div>
           <div>
-            <img src="../assets/images/linshi.png" alt="">
+            <img src="../assets/images/linshi.png" alt="" />
           </div>
         </div>
       </div>
@@ -22,12 +22,9 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped lang="scss">
-@import '../assets/style/Talent.scss'
-
+@import "../assets/style/Total.scss";
 </style>
