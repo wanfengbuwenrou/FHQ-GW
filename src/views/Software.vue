@@ -2,11 +2,21 @@
   <div>
     <div class="content">
       <div class="left">
-        <div>软件</div>
-        <div>软件开发</div>
-        <div>软件开发</div>
-        <div>软件开发</div>
-        <div>软件开发</div>
+         <el-menu
+          :default-active="$route.path"
+          class="el-menu-demo"
+          mode="horizontal"
+          @select="handleSelect"
+        active-text-color="red"
+        router
+          text-color="black"
+        >
+          <el-menu-item index="/total/software">软件</el-menu-item>
+          <el-menu-item index="1">软件服务</el-menu-item>
+          <el-menu-item index="2">软件开发</el-menu-item>
+          <el-menu-item index="3">消息中心</el-menu-item>
+          <el-menu-item index="4">联系我们</el-menu-item>
+        </el-menu>
       </div>
       <div class="right">
         <div>软件开发</div>
@@ -22,7 +32,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+   methods: {
+    handleSelect(key,keyPath) {
+      
+    }
+  },
+};
 </script>
 
 <style scoped lang="scss">

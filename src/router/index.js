@@ -1,26 +1,36 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+import Vue from "vue";
+import VueRouter from "vue-router";
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: '/ceshi',
+    name: 'ceshi',
+    component: () => import('../ceshi/ceshi.vue'),
+  },
+  {
+    path: "/",
     redirect: "/index",
   },
-   // 首页
-   {
+  // 首页
+  {
     path: "/index",
     name: "index",
     component: () => import("../views/Index.vue"),
-    children:[
-      
-    ]
+    children: [],
+    meta: {
+      title: "元蚁科技",
+    },
   },
   // 关于我们
   {
     path: "/aboutme",
     name: "aboutme",
     component: () => import("../views/Aboutme.vue"),
+    meta: {
+      //
+      title: "公司简介",
+    },
   },
   {
     path: "/total",
@@ -29,27 +39,39 @@ const routes = [
     children: [
       // 财务页面
       {
-        path: 'financial',
-        name: 'financial',
-        component: () => import('../views/Financial.vue'),
+        path: "financial",
+        name: "financial",
+        component: () => import("../views/Financial.vue"),
+        meta: {
+          title: "财务",
+        },
       },
       // 审计页面
       {
-        path: 'audit',
-        name: 'audit',
-        component: () => import('../views/Audit.vue'),
+        path: "audit",
+        name: "audit",
+        component: () => import("../views/Audit.vue"),
+        meta: {
+          title: "审计",
+        },
       },
       // 人才推荐
       {
-        path: 'talent',
-        name: 'talent',
-        component: () => import('../views/Talent.vue'),
+        path: "talent",
+        name: "talent",
+        component: () => import("../views/Talent.vue"),
+        meta: {
+          title: "人才推荐",
+        },
       },
       // 软件开发
       {
-        path: 'software',
-        name: 'software',
-        component: () => import('../views/Software.vue'),
+        path: "software",
+        name: "software",
+        component: () => import("../views/Software.vue"),
+        meta: {
+          title: "软件开发",
+        },
       },
     ],
   },
@@ -58,21 +80,33 @@ const routes = [
     path: "/incubation",
     name: "incubation",
     component: () => import("../views/Incubation.vue"),
+    meta: {
+      title: "资讯政策",
+    },
   },
   // 最新政策详情
   {
-    path: '/policydetail',
-    name: 'policydetail',
-    component: () => import('../views/Policydetail.vue'),
+    path: "/policydetail",
+    name: "policydetail",
+    component: () => import("../views/Policydetail.vue"),
+    meta: {
+      title: "最新政策",
+    },
   },
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
   scrollBehavior: () => ({ y: 0 }),
-})
+});
 
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title;
+  }
+  next();
+});
 
-export default router
+export default router;

@@ -57,7 +57,7 @@ export default {
 
 <style scoped lang="scss">
 @import "../../node_modules/swiper/dist/css/swiper.min.css";
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .swiper-container {
     width: 100%;
     height: 70rem;
@@ -72,10 +72,10 @@ export default {
     }
   }
 }
-@media (max-width: 1024px) {
+@media only screen and (min-width: 360px) and (max-width: 1200px) {
   .swiper-container {
     width: 100%;
-    height: 40rem;
+    height: 30rem;
   }
 
   .swiper-slide {

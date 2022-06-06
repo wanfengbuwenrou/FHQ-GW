@@ -1,63 +1,62 @@
 <template>
-  <div class="f1">
-    <!-- 头部 -->
-    <YyHeader></YyHeader>
-    <div>
-      <img
-        style="width: 100%; height: 40rem"
-        src="https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115546_0051de9a7c27a608260989b53287df4b11.png"
-      />
-    </div>
-    <!-- 政策导航 -->
-    <el-container class="f2">
-      <el-main>
-        <el-menu
-          :default-active="activeIndex"
-          class="el-menu-demo"
-          mode="horizontal"
-          @select="handleSelect"
-          text-color="black"
-          active-text-color="red"
-          router
-        >
-          <el-menu-item index="1">最新政策</el-menu-item>
-          <el-menu-item index="2">新闻资讯</el-menu-item>
-        </el-menu>
-      </el-main>
-    </el-container>
-    <el-container class="f3">
-      <!-- 标题 -->
-      <el-header>最新政策</el-header>
-      <el-main>
-        <!-- 政策列表 -->
-        <el-card class="box-card">
-          <div v-for="(item, i) in cardcontent" :key="i" @click="godetail">
-            <div>{{ item.title }}</div>
-            <div>{{ item.content }}</div>
-            <div>{{ item.time }}</div>
-            <div></div>
-          </div>
-      <!-- 分页条 -->
-
-          <div class="block">
-          <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page="currentPage4"
-            :page-sizes="[10, 20, 30, 40]"
-            :page-size="100"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="400"
+  <div>
+    <div class="body">
+      <!-- 头部 -->
+      <YyHeader></YyHeader>
+      <div class="pic">
+        <img 
+          src="../assets/images/2.png"
+        />
+      </div>
+      <!-- 政策导航 -->
+      <el-container class="f2">
+        <el-main>
+          <el-menu
+            :default-active="activeIndex"
+            class="el-menu-demo"
+            mode="horizontal"
+            @select="handleSelect"
+            text-color="black"
+            active-text-color="red"
+            router
           >
-          </el-pagination>
-        </div>
-        </el-card>
-      </el-main>
+            <el-menu-item index="1">最新政策</el-menu-item>
+            <el-menu-item index="2">新闻资讯</el-menu-item>
+          </el-menu>
+        </el-main>
+      </el-container>
+      <el-container class="f3">
+        <!-- 标题 -->
+        <el-header>最新政策</el-header>
+        <el-main>
+          <!-- 政策列表 -->
+          <el-card class="box-card">
+            <div v-for="(item, i) in cardcontent" :key="i" @click="godetail">
+              <div>{{ item.title }}</div>
+              <div>{{ item.content }}</div>
+              <div>{{ item.time }}</div>
+              <div></div>
+            </div>
+            <!-- 分页条 -->
 
-    </el-container>
-
-    <BackTop></BackTop>
-    <YyFooter></YyFooter>
+            <div class="block">
+              <el-pagination
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="currentPage4"
+                :page-sizes="[10, 20, 30, 40]"
+                :page-size="100"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="400"
+              >
+              </el-pagination>
+            </div>
+          </el-card>
+        </el-main>
+      </el-container>
+      <BackTop></BackTop>
+      <YyFooter></YyFooter>
+    </div>
   </div>
 </template>
 
@@ -119,7 +118,4 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/style/Incubation.scss";
-.f1 {
-  background-color: rgb(230, 227, 227);
-}
 </style>

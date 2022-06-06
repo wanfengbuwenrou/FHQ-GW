@@ -1,197 +1,416 @@
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .f3 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 30px 100px;
-  }
-  .one {
-    flex-basis: 56%;
-    > div:first-child {
-      font-size: 20px;
-      > span:first-child {
-        font-weight: 600;
-        display: inline-block;
-        padding: 20px 20px 20px 0;
-      }
-      > span:last-child {
-        color: rgb(230, 227, 227);
-      }
-    }
-    > div:nth-child(2) {
-      line-height: 30px;
-      font-size: 14px;
-      height: 350px;
-      overflow: hidden;
-    }
-    > div:last-child {
-      color: #36d;
-      float: right;
-      padding-top: 10px;
-    }
-  }
-  .two {
-    flex-basis: 42%;
-    margin-top: 80px;
-    div {
-      margin: 0 auto;
-    }
-  }
-  .f4 {
-    .top {
-      margin: 1rem 1rem;
-      > div:first-child {
-        font-size: 2rem;
-        > span:first-child {
-          font-weight: 600;
-          display: flex;
-        }
-        > span:last-child {
-          color: rgb(230, 227, 227);
-        }
-      }
-    }
-    .main2 {
-      background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115606_c9f2d16c165c230dbfb4d13c908290d632.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      >div{
-        width:18%;
-        display: flex;
-        padding: 10px 10px;        
-          >img{
-            width: 100%;
-            height: 100%;
-          }
-      }
-    }
-  }
-  .f5 {
-    .top {
-      margin: 1rem 1rem;
-      > div:first-child {
-        font-size: 2rem;
-        > span:first-child {
-          font-weight: 600;
-          display: flex;
-        }
-        > span:last-child {
-          color: rgb(230, 227, 227);
-        }
-      }
-    }
-    
-
-  }
-}
-@media (max-width: 1024px) {
-  .f3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1.5rem 2rem;
+    margin: 0 100px;
     .one {
-      height: 40rem;
+      flex: 6;
       > div:first-child {
-        font-size: 2rem;
+        font-size: 20px;
         > span:first-child {
           font-weight: 600;
-          display: flex;
+          display: inline-block;
+          padding: 20px 20px 20px 0;
         }
         > span:last-child {
           color: rgb(230, 227, 227);
         }
       }
       > div:nth-child(2) {
-        line-height: 30px;
-        font-size: 1.5rem;
+        line-height: 35px;
+        font-size: 16px;
         overflow: hidden;
       }
       > div:last-child {
         color: #36d;
         float: right;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        margin-top: 2rem;
+        font-size: 18px;
+        padding-top: 10px;
+      }
+    }
+    .two {
+      flex: 4;
+      height: 500px;
+      > img {
+        width: 100%;
+        height: 100%;
       }
     }
   }
-
-  .f4 {
+  .f5 {
+    margin: 0 100px;
     .top {
-      margin: 1rem 1rem;
-
-      > div:first-child {
-        font-size: 2rem;
+      font-size: 20px;
+      margin: 20px;
+      > div {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
         > span:first-child {
           font-weight: 600;
-          display: flex;
+          margin-right: 20px;
         }
         > span:last-child {
           color: rgb(230, 227, 227);
         }
       }
     }
-
+    .el-main {
+      .el-carousel {
+        height: 420px;
+        .el-carousel__item {
+          height: 400px;
+          > div {
+            height: 100%;
+            width: 100%;
+            > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .el-carousel__arrow {
+          margin-top: 5%;
+        }
+      }
+    }
+  }
+  .f4 {
+    // 合作企业的介绍
     .main2 {
-      background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115606_c9f2d16c165c230dbfb4d13c908290d632.png");
-      background-repeat: no-repeat;
-      background-size: cover;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      >div{
-        width:150px;
+      > div {
         display: flex;
-        padding: 10px 10px;        
-          >img{
+        flex-basis: 70%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        > div {
+          flex-basis: 20%;
+          height: 120px;
+          // height: 13rem;
+          > img {
             width: 100%;
             height: 100%;
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and(max-width:1200px) {
+  .f3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    .one {
+      > div:first-child {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        text-align: center;
+        > span:first-child {
+          font-weight: 600;
+          display: inline-block;
+        }
+        > span:last-child {
+          color: rgb(230, 227, 227);
+        }
+      }
+      > div:nth-child(2) {
+        line-height: 35px;
+        font-size: 16px;
+        overflow: hidden;
+      }
+      > div:last-child {
+        color: #36d;
+        float: right;
+        font-size: 16px;
+        padding-top: 10px;
+      }
+    }
+    .two {
+      display: none;
+      // > img {
+      //   width: 100%;
+      //   height: 100%;
+      // }
+    }
+  }
+  .f4 {
+    // 合作企业的介绍
+    .main2 {
+      display: flex;
+      > div {
+        display: flex;
+        flex-basis: 70%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        > div {
+          flex-basis: 20%;
+          height: 120px;
+          // height: 13rem;
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
     }
   }
   .f5 {
     .top {
-      margin: 1rem 1rem;
-      > div:first-child {
-        font-size: 2rem;
+      > div {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
         > span:first-child {
           font-weight: 600;
-          display: flex;
+          font-size: 20px;
         }
         > span:last-child {
+          font-size: 20px;
           color: rgb(230, 227, 227);
+        }
+      }
+    }
+    .el-main {
+      .el-carousel {
+        height: 310px;
+        .el-carousel__item {
+          height: 300px;
+          > div {
+            height: 100%;
+            width: 100%;
+            > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .el-carousel__arrow {
+          margin-top: 3%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .f3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .one {
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > span:first-child {
+          font-weight: 600;
+          font-size: 20px;
+          margin: 10px;
+        }
+        > span:last-child {
+          display: none;
+        }
+      }
+      > div:nth-child(2) {
+        line-height: 30px;
+        font-size: 14px;
+        text-indent: 24px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 10;
+        overflow: hidden;
+      }
+      > div:last-child {
+        color: #36d;
+        font-size: 14px;
+        margin-top: 10px;
+        float: right;
+      }
+    }
+    .two {
+      width: 100%;
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .f4 {
+    .top {
+      > div > span:first-child {
+        margin: 10px;
+      }
+      > div > span:last-child {
+        display: none;
+      }
+    }
+    .content {
+      // height: 600px;
+      .main1 > div > div > p {
+        line-height: 20px;
+        margin-top: 40px;
+        color: #fff;
+        text-align: center;
+        white-space: pre-wrap;
+      }
+      // 孵化服务12张图
+      .main1 {
+        background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115546_0051de9a7c27a608260989b53287df4b11.png")
+          rgba(0, 0, 0, 0.6);
+        background-repeat: no-repeat;
+        opacity: 1;
+        background-size: cover;
+        background-blend-mode: multiply;
+        overflow: hidden;
+        height: 100%;
+        width: 1200px;
+
+        > div {
+          > div:nth-child(2) {
+            width: 900px;
+            margin: 0 auto;
+            margin-top: 100px;
+            .top {
+              display: flex;
+              margin-left: 70px;
+              width: 900px;
+
+              > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #fff;
+                > div:first-child {
+                  width: 60px;
+                  height: 60px;
+                  > img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                > div:last-child {
+                  font-size: 14px;
+                }
+              }
+            }
+            .center {
+              display: flex;
+              // .top {
+              //   width: 8px;
+              //   height: 40px;
+              //   margin: 0;
+              //   background-color: rgb(249, 105, 7);
+              // }
+              // .bottom {
+              //   width: 8px;
+              //   height: 40px;
+              //   margin: 0;
+              //   background-color: rgb(249, 105, 7);
+              // }
+              .hr {
+                height: 5px;
+                background-color: rgb(249, 105, 7);
+                margin: 30px;
+              }
+            }
+            .bottom {
+              display: flex;
+              width: 850px;
+              justify-content: end;
+              > div {
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+                width: 60px;
+                > div:first-child {
+                  width: 60px;
+                  height: 60px;
+                  > img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 合作企业的介绍
+    .main2 {
+      > div {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        > div {
+          flex-basis: 20%;
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .f5 {
+    .top {
+      > div {
+        text-align: center;
+
+        > span:first-child {
+          font-weight: 600;
+          font-size: 20px;
+          margin-top: 10px;
+        }
+        > span:last-child {
+          display: none;
+        }
+      }
+    }
+    .el-main {
+      .el-carousel {
+        // height: 130px;
+        .el-carousel__item {
+          height: 200px;
+          line-height: 130px;
+          > div {
+            height: 100%;
+            > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .el-carousel__arrow {
+          margin-top: 3%;
         }
       }
     }
   }
 }
 
-
 .f4 {
   .top {
-    width: 100%;
-    margin: 1rem 1rem;
-    > div:first-child {
-      font-size: 22px;
+    > div {
+      text-align: center;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
       > span:first-child {
         font-weight: 600;
-        display: flex;
       }
       > span:last-child {
         color: rgb(230, 227, 227);
       }
     }
   }
-  .container {
-    width: 100%;
-    height: 600px;
-    .main1 > div >div> p {
+  .content {
+    height: 650px;
+    .main1 > div > div > p {
       line-height: 20px;
       margin-top: 40px;
       color: #fff;
@@ -210,18 +429,21 @@
       height: 100%;
       > div {
         > div:nth-child(2) {
-          width: 800px;
+          width: 900px;
           margin: 0 auto;
           margin-top: 100px;
           .top {
             display: flex;
-            width: 700px;
-            justify-content: space-around;
+            margin-left: 70px;
+            width: 900px;
+
             > div {
               display: flex;
               flex-direction: column;
               align-items: center;
               color: #fff;
+              margin: 0 30px;
+
               width: 60px;
               > div:first-child {
                 width: 60px;
@@ -231,25 +453,14 @@
                   height: 100%;
                 }
               }
-              >div:last-child{
+              > div:last-child {
                 font-size: 14px;
               }
             }
           }
-          .center{
+          .center {
             display: flex;
-            .top {
-              width: 8px;
-              height: 40px;
-              margin: 0;
-              background-color: rgb(249, 105, 7);
-            }
-            .bottom {
-              width: 8px;
-              height: 40px;
-              margin: 0;
-              background-color: rgb(249, 105, 7);
-            }
+            width: 900px;
             .hr {
               height: 5px;
               background-color: rgb(249, 105, 7);
@@ -258,13 +469,13 @@
           }
           .bottom {
             display: flex;
-            width: 700px;
-            margin-left: 80px;
-            justify-content: space-evenly;
+            width: 850px;
+            justify-content: end;
             > div {
               display: flex;
               flex-direction: column;
               color: #fff;
+              margin: 0 30px;
               width: 60px;
               > div:first-child {
                 width: 60px;

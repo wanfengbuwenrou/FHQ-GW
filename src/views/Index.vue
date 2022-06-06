@@ -1,8 +1,10 @@
 <template>
   <div>
+    <!-- 顶部导航 -->
     <yy-header></yy-header>
     <!-- 轮播图 -->
     <yy-swiper></yy-swiper>
+    <!-- 简介 -->
     <el-container class="f3">
       <el-main class="one">
         <div>
@@ -15,7 +17,7 @@
         <div @click="goaboutme">了解更多></div>
       </el-main>
       <el-main class="two">
-        <img style="width: 100%; height: 35rem" src="../assets/images/4.png" />
+        <img src="../assets/images/4.png" />
       </el-main>
     </el-container>
     <!-- 孵化服务 -->
@@ -26,10 +28,11 @@
           <span>INCUBATION SERVICES</span>
         </div>
       </el-header>
-      <el-main class="container">
+      <el-main class="content">
         <el-main class="main1">
           <div>
             <div>
+              <!-- 上方文字 -->
               <p>
                 针对科技企业孵化，孵化器对入孵的企业在提供基础服务的同时，开展了多样化的增值服务，建设了以软件服务，财税服务,人力资源服务，企业诊断服务.
               </p>
@@ -136,8 +139,10 @@
         </div>
       </el-header>
       <el-main class="main2">
-        <div v-for="(item, i) in cooperative" :key="i">
-          <img :src="item.url" alt="" />
+        <div>
+          <div v-for="(item, i) in cooperative" :key="i">
+            <img :src="item.url" alt="" />
+          </div>
         </div>
       </el-main>
     </el-container>
@@ -150,33 +155,28 @@
         </div>
       </el-header>
       <el-main>
-        <template style="height: 600px">
-          <el-carousel style="height: 600px" :autoplay="false">
-            <el-carousel-item style="height: 600px">
-              <img
-                style="width: 100%; height: 100%"
-                src="../assets/images/ry1.png"
-                alt=""
-              />
+        <template>
+          <el-carousel :autoplay="false" type="card" height="200px">
+            <el-carousel-item>
+              <div>
+                <img src="../assets/images/ry1.png" alt="">
+              </div>
             </el-carousel-item>
-            <el-carousel-item style="height: 600px">
-              <img
-                style="width: 100%; height: 100%"
-                src="../assets/images/ry2.png"
-                alt=""
-              />
+            <el-carousel-item>
+              <div>
+                <img src="../assets/images/ry2.png" alt="">
+              </div>
             </el-carousel-item>
-            <el-carousel-item style="height: 600px">
-              <img
-                style="width: 100%; height: 100%"
-                src="../assets/images/ry3.png"
-                alt=""
-              />
+            <el-carousel-item>
+              <div>
+                <img src="../assets/images/ry3.png" alt="">
+              </div>
             </el-carousel-item>
           </el-carousel>
         </template>
       </el-main>
     </el-container>
+    <!-- 底部简介 -->
     <yy-footer></yy-footer>
     <BackTop></BackTop>
   </div>

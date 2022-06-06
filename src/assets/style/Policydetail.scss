@@ -1,5 +1,53 @@
-.f1{
-  .el-breadcrumb__inner a, .el-breadcrumb__inner.is-link{
-    color: red;
+@media (min-width: 1200px){
+  .f1{
+    .el-breadcrumb{
+      font-size: 18px;
+      padding: 50px 50px 20px 50px;
+      border-top: 1px solid rgb(187, 187, 187);
+    }
+  }
+  .f2{
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 100px;
+    font-size: 16px;
+    >h2{
+      color: red;
+    }
+    >div{
+      // margin: 30px;
+      padding: 20px;
+      border-bottom: 1px solid rgb(187, 187, 187);
+    }
+    >p:nth-child(3){
+      margin-top: 20px;
+    }
+    >p:last-child{
+      margin-bottom: 50px;
+    }
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 1200px){
+  .f1{
+    display: none;
+  }
+  .f2{
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    >h2{
+      color: red;
+    }
+    >div{
+      padding: 20px;
+      border-bottom: 1px solid rgb(187, 187, 187);
+    }
+    >p:nth-child(3){
+      margin-top: 20px;
+    }
+    >p:last-child{
+      margin-bottom: 50px;
+    }
   }
 }
