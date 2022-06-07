@@ -41,7 +41,7 @@
       </div>
       <!-- f3 -->
       <div class="f3">
-        <div id="container"></div>
+        <div id="map"></div>
       </div>
       <BackTop></BackTop>
       <!-- 底部 -->
@@ -52,32 +52,40 @@
 
 <script>
 import AMapLoader from "@amap/amap-jsapi-loader";
+window._AMapSecurityConfig = {
+        securityJsCode: "67d50e882e3bd08043755bb5b3a258ef",
+      };
 import YyHeader from "@/components/YyHeader.vue";
 import YyFooter from "@/components/YyFooter.vue";
 import BackTop from "@/components/BackTop.vue";
 export default {
   components: { YyHeader, YyFooter, BackTop },
   data() {
-    return {};
+    return {
+        map:null
+    };
   },
-  created() {
-    AMapLoader.load({
-      key: "758a058ea9d1983deedafb8a1a4ed6cb", // 申请好的Web端开发者Key，首次调用 load 时必填
-      version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-      plugins: [],
-    })
-      .then((AMap) => {
-            let map = new AMap.Map("container", {
-              zoom: 13, //级别
-              center: [116.397428, 39.90923], //中心点坐标
-              viewMode: "3D", //使用3D视图
+  mounted() {
+      this.initMap()
+  },
+  methods:{
+    initMap(){
+        AMapLoader.load({
+            key:"758a058ea9d1983deedafb8a1a4ed6cb",             // 申请好的Web端开发者Key，首次调用 load 时必填
+            version:"2.0",      // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
+            plugins:[''],       // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+        }).then((AMap)=>{
+            this.map = new AMap.Map("map",{  //设置地图容器id
+                viewMode:"3D",    //是否为3D地图模式
+                zoom:5,           //初始化地图级别
+                center:[105.602725,37.076636], //初始化地图中心点位置
             });
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  },
-  mounted() {},
+        }).catch(e=>{
+            console.log(e);
+        })
+    },
+},
+
 };
 </script>
 
