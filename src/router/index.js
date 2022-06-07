@@ -89,6 +89,11 @@ const routes = [
     },
   },
   {
+    path: '/contactus',
+    name: 'contactus',
+    component: () => import('../views/Contactus.vue'),
+  },
+  {
     path: '/404',
     name: '404',
     component: () => import('../views/404.vue'),

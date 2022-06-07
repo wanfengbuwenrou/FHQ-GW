@@ -11,16 +11,7 @@
         >
           <div><i class="el-icon-phone"></i></div>
         </el-tooltip>
-        <i class="el-icon-message"></i>
-        <!-- <el-popover
-    placement="left"
-    width="200"
-    trigger="hover"
-    content="solt">
-    <div slot="reference" class="vx">
-      <img src="../assets/images/vx.svg" alt="">
-    </div>
-  </el-popover> -->
+        <i @click="contactus" class="el-icon-message"></i>
         <div class="vx">
           <img class="tu1" src="../assets/images/vx.svg" />
           <div  class="tu2">
@@ -30,12 +21,12 @@
       </div>
     </div>
     <div class="phone">
-      <div>
-        <i class="el-icon-phone"></i>
+      <div @click="contactus">
+        <i  class="el-icon-phone"></i>
         <div>电话咨询</div>
       </div>
-      <div>
-        <i class="el-icon-message"></i>
+      <div @click="contactus">
+        <i   class="el-icon-message"></i>
         <div>邮件联系</div>
       </div>
     </div>
@@ -44,6 +35,11 @@
 
 <script>
 export default {
+  methods: {
+    contactus() {
+      this.$router.push('/contactus')
+    }
+  },
 };
 </script>
 
