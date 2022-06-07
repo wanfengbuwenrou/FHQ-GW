@@ -88,6 +88,15 @@ const routes = [
       title: "最新政策",
     },
   },
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('../views/404.vue'),
+  },
+  {
+    path: '*',
+    redirect:'/404'
+  },
 ];
 
 const router = new VueRouter({
