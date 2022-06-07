@@ -71,15 +71,30 @@ export default {
   methods:{
     initMap(){
         AMapLoader.load({
-            key:"758a058ea9d1983deedafb8a1a4ed6cb",             // 申请好的Web端开发者Key，首次调用 load 时必填
-            version:"2.0",      // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-            plugins:[''],       // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+            key:"758a058ea9d1983deedafb8a1a4ed6cb",           
+            version:"2.0",     
+            plugins:['AMap.Geocoder'],     
         }).then((AMap)=>{
-            this.map = new AMap.Map("map",{  //设置地图容器id
-                viewMode:"3D",    //是否为3D地图模式
-                zoom:5,           //初始化地图级别
-                center:[105.602725,37.076636], //初始化地图中心点位置
+             AMap.plugin("AMap.Geocoder", function () {
+              let geocoder = new AMap.Geocoder({
+                city: "",
+              });
+              geocoder.getLocation('天津市滨海新区博润广场1号楼', function (status, result) {
+                console.log(result);
+                let lng = result.geocodes[0].location.lng;
+                let lat = result.geocodes[0].location.lat;
+                console.log(lng);
+                console.log(lat);
+                showMap(lng, lat);
+              });
             });
+            function showMap(lng, lat) {
+            var map = new AMap.Map("map", {
+              zoom: 13, //级别
+              center: [lng, lat], //中心点坐标
+              viewMode: "3D", //使用3D视图
+            });
+          }
         }).catch(e=>{
             console.log(e);
         })

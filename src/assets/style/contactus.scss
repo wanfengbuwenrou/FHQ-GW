@@ -1,12 +1,12 @@
 @media (min-width: 768px) {
   .contactus {
     .f1 {
+      width: 100%;
+      height: 500px;
+      > img {
         width: 100%;
-        height: 500px;
-        >img{
-            width: 100%;
-            height: 100%;
-        }
+        height: 100%;
+      }
     }
     .f2 {
       display: flex;
@@ -84,25 +84,89 @@
         }
       }
     }
-    .f3{
-      height: 800px;
+    .f3 {
+      height: 600px;
       width: 1400px;
       margin: 0 auto;
       margin-top: 100px;
       margin-bottom: 50px;
-      #map{
+      #map {
         height: 100%;
+      }
     }
-    }
-    
   }
 }
 @media (max-width: 768px) {
-  .f3{
+  .f1 {
+    width: 100%;
     height: 300px;
-    .container{
+    > img {
       width: 100%;
-      border: 1px solid red;
+      height: 100%;
+    }
   }
+  .f2 {
+    border: 1px solid red;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: space-around;
+    > div {
+      width: 45%;
+      height: 200px;
+      border: 1px solid red;
+      text-align: center;
+    }
+    .one {
+      > div:first-child {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: -40px;
+        margin-bottom: 30px;
+        border-radius: 50%;
+        > i {
+          font-size: 50px;
+          margin-top: 10px;
+          color: #fff;
+        }
+      }
+      > div:nth-child(3) {
+        margin: 5px 0;
+      }
+    }
+    > div:first-child {
+      > div:first-child {
+        background-color: rgb(134, 145, 240);
+      }
+      > div:nth-child(2) {
+        color: rgb(134, 145, 240);
+      }
+    }
+    > div:nth-child(3) {
+      > div:first-child {
+        background-color: rgb(108, 158, 251);
+      }
+      > div:nth-child(2) {
+        color: rgb(134, 145, 240);
+      }
+    }
+    > div:last-child {
+      > div:first-child {
+        background-color: rgb(252, 177, 132);
+      }
+      > div:nth-child(2) {
+        color: rgb(252, 177, 132);
+      }
+    }
+    .two{
+      >div:first-child{
+        border: 1px solid red;
+        width: 70px;
+        height: 70px;
+      }
+    }
   }
 }
