@@ -44,40 +44,61 @@
               <!-- 上边6个 -->
               <div class="top">
                 <div>
-                  <div>
-                    <img src="../assets/images/caishui.png" alt="" />
-                  </div>
-                  <div>技术开发</div>
+                  <router-link to="/total/software" class="goes">
+                    <div>
+                      <img src="../assets/images/caishui.png" alt="" />
+                    </div>
+                    <div>技术开发</div>
+                    <div></div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/dingzhi.png" alt="" />
-                  </div>
-                  <div>APP定制</div>
+                  <router-link to="/total/software" class="goes">
+                    <div>
+                      <img src="../assets/images/dingzhi.png" alt="" />
+                    </div>
+                    <div>APP定制</div>
+                    <div></div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/jishu.png" alt="" />
-                  </div>
-                  <div>技术转让</div>
+                  <router-link to="/total/software" class="goes">
+                    <div>
+                      <img src="../assets/images/jishu.png" alt="" />
+                    </div>
+                    <div>技术转让</div>
+                    <div></div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/kaifa.png" alt="" />
-                  </div>
-                  <div>技术咨询</div>
+                  <router-link to="/total/software" class="goes">
+                    <div>
+                      <img src="../assets/images/kaifa.png" alt="" />
+                    </div>
+                    <div>技术咨询</div>
+                    <div></div>
+
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/rencaituijian.png" alt="" />
-                  </div>
-                  <div>人才推荐</div>
+                  <router-link to="/total/talent" class="goes">
+                    <div>
+                      <img src="../assets/images/rencaituijian.png" alt="" />
+                    </div>
+                    <div>人才推荐</div>
+                    <div></div>
+
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/caishui.png" alt="" />
-                  </div>
-                  <div>财税咨询</div>
+                  <router-link to="/total/financial" class="goes">
+                    <div>
+                      <img src="../assets/images/caishui.png" alt="" />
+                    </div>
+                    <div>财税咨询</div>
+                    <div></div>
+
+                  </router-link>
                 </div>
               </div>
               <!-- 分割线 -->
@@ -89,40 +110,64 @@
               <!-- 下面六个 -->
               <div class="bottom">
                 <div>
-                  <div>
-                    <img src="../assets/images/lianxi.png" alt="" />
-                  </div>
-                  <div>税收筹划</div>
+                  <router-link to="/total/financial" class="goes">
+                    <div></div>
+
+                    <div>
+                      <img src="../assets/images/lianxi.png" alt="" />
+                    </div>
+                    <div>税收筹划</div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/renli.png" alt="" />
-                  </div>
-                  <div>审计服务</div>
+                  <router-link to="/total/audit" class="goes">
+                    <div></div>
+
+                    <div>
+                      <img src="../assets/images/renli.png" alt="" />
+                    </div>
+                    <div>审计服务</div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/shenji.png" alt="" />
-                  </div>
-                  <div>人力资源</div>
+                  <router-link to="/total/talent" class="goes">
+                    <div></div>
+
+                    <div>
+                      <img src="../assets/images/shenji.png" alt="" />
+                    </div>
+                    <div>人力资源</div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/shui.png" alt="" />
-                  </div>
-                  <div>评估模型</div>
+                  <router-link to="/total/audit" class="goes">
+                    <div></div>
+
+                    <div>
+                      <img src="../assets/images/shui.png" alt="" />
+                    </div>
+                    <div>评估模型</div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/caishui.png" alt="" />
-                  </div>
-                  <div>税务管理</div>
+                  <router-link to="/total/financial" class="goes">
+                    <div></div>
+
+                    <div>
+                      <img src="../assets/images/caishui.png" alt="" />
+                    </div>
+                    <div>税务管理</div>
+                  </router-link>
                 </div>
                 <div>
-                  <div>
-                    <img src="../assets/images/dingzhi.png" alt="" />
-                  </div>
-                  <div>其他服务</div>
+                  <router-link to="/total/audit" class="goes">
+                    <div></div>
+
+                    <div>
+                      <img src="../assets/images/dingzhi.png" alt="" />
+                    </div>
+                    <div>审计服务</div>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -159,17 +204,17 @@
           <el-carousel :autoplay="false" type="card" height="200px">
             <el-carousel-item>
               <div>
-                <img src="../assets/images/ry1.png" alt="">
+                <img src="../assets/images/ry1.png" alt="" />
               </div>
             </el-carousel-item>
             <el-carousel-item>
               <div>
-                <img src="../assets/images/ry2.png" alt="">
+                <img src="../assets/images/ry2.png" alt="" />
               </div>
             </el-carousel-item>
             <el-carousel-item>
               <div>
-                <img src="../assets/images/ry3.png" alt="">
+                <img src="../assets/images/ry3.png" alt="" />
               </div>
             </el-carousel-item>
           </el-carousel>

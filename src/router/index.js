@@ -4,11 +4,6 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/ceshi',
-    name: 'ceshi',
-    component: () => import('../ceshi/ceshi.vue'),
-  },
-  {
     path: "/",
     redirect: "/index",
   },

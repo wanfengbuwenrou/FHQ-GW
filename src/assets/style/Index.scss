@@ -78,16 +78,17 @@
     // 合作企业的介绍
     .main2 {
       display: flex;
+      height: 400px;
       > div {
         display: flex;
-        flex-basis: 70%;
+        width: 80%;
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 0 auto;
         > div {
-          flex-basis: 20%;
+          margin-top: 20px;
+          flex-basis: 18%;
           height: 120px;
-          // height: 13rem;
           > img {
             width: 100%;
             height: 100%;
@@ -130,26 +131,23 @@
     }
     .two {
       display: none;
-      // > img {
-      //   width: 100%;
-      //   height: 100%;
-      // }
     }
   }
   .f4 {
     // 合作企业的介绍
     .main2 {
       display: flex;
+      height: 340px;
+
       > div {
         display: flex;
-        flex-basis: 70%;
+        flex-basis: 90%;
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 0 auto;
         > div {
-          flex-basis: 20%;
+          flex-basis: 18%;
           height: 120px;
-          // height: 13rem;
           > img {
             width: 100%;
             height: 100%;
@@ -248,111 +246,27 @@
         display: none;
       }
     }
-    .content {
-      // height: 600px;
-      .main1 > div > div > p {
-        line-height: 20px;
-        margin-top: 40px;
-        color: #fff;
-        text-align: center;
-        white-space: pre-wrap;
-      }
-      // 孵化服务12张图
-      .main1 {
-        background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115546_0051de9a7c27a608260989b53287df4b11.png")
-          rgba(0, 0, 0, 0.6);
-        background-repeat: no-repeat;
-        opacity: 1;
-        background-size: cover;
-        background-blend-mode: multiply;
-        overflow: hidden;
-        height: 100%;
-        width: 1200px;
-
-        > div {
-          > div:nth-child(2) {
-            width: 900px;
-            margin: 0 auto;
-            margin-top: 100px;
-            .top {
-              display: flex;
-              margin-left: 70px;
-              width: 900px;
-
-              > div {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                color: #fff;
-                > div:first-child {
-                  width: 60px;
-                  height: 60px;
-                  > img {
-                    width: 100%;
-                    height: 100%;
-                  }
-                }
-                > div:last-child {
-                  font-size: 14px;
-                }
-              }
-            }
-            .center {
-              display: flex;
-              // .top {
-              //   width: 8px;
-              //   height: 40px;
-              //   margin: 0;
-              //   background-color: rgb(249, 105, 7);
-              // }
-              // .bottom {
-              //   width: 8px;
-              //   height: 40px;
-              //   margin: 0;
-              //   background-color: rgb(249, 105, 7);
-              // }
-              .hr {
-                height: 5px;
-                background-color: rgb(249, 105, 7);
-                margin: 30px;
-              }
-            }
-            .bottom {
-              display: flex;
-              width: 850px;
-              justify-content: end;
-              > div {
-                display: flex;
-                flex-direction: column;
-                color: #fff;
-                width: 60px;
-                > div:first-child {
-                  width: 60px;
-                  height: 60px;
-                  > img {
-                    width: 100%;
-                    height: 100%;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    // 合作企业的介绍
     .main2 {
+      display: flex;
+      height: 200px;
       > div {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        margin: 0 auto;
         > div {
-          flex-basis: 20%;
+          flex-basis: 18%;
+          height: 70px;
           > img {
             width: 100%;
             height: 100%;
           }
         }
+      }
+    }
+    .content {
+      .main1 {
+        width: 1200px;
       }
     }
   }
@@ -408,6 +322,13 @@
       }
     }
   }
+  .main2{
+    background: url("https://oss.yesdev.cn/uploads/c4fdfba43916368965fcdfeb16983c54/20220601/YesDev20220601_213707_115606_c9f2d16c165c230dbfb4d13c908290d632.png");
+    margin: 0 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
   .content {
     height: 650px;
     .main1 > div > div > p {
@@ -436,25 +357,32 @@
             display: flex;
             margin-left: 70px;
             width: 900px;
-
             > div {
               display: flex;
               flex-direction: column;
               align-items: center;
               color: #fff;
               margin: 0 30px;
-
               width: 60px;
-              > div:first-child {
-                width: 60px;
-                height: 60px;
-                > img {
-                  width: 100%;
-                  height: 100%;
+              .goes{
+                >div:last-child{
+                  width: 5px;
+                  height: 30px;
+                  background-color: rgb(249, 105, 7);
+                  margin: 10px 0 0 25px;
                 }
-              }
-              > div:last-child {
-                font-size: 14px;
+                > div:first-child {
+                  width: 60px;
+                  height: 60px;
+                  > img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                > div:nth-child(2) {
+                  font-size: 14px;
+                  color: #fff;
+                }
               }
             }
           }
@@ -464,7 +392,7 @@
             .hr {
               height: 5px;
               background-color: rgb(249, 105, 7);
-              margin: 30px;
+              margin: -5px;
             }
           }
           .bottom {
@@ -477,12 +405,24 @@
               color: #fff;
               margin: 0 30px;
               width: 60px;
-              > div:first-child {
-                width: 60px;
-                height: 60px;
-                > img {
-                  width: 100%;
-                  height: 100%;
+
+              .goes{
+                >div:first-child{
+                  width: 5px;
+                  height: 30px;
+                  background-color: rgb(249, 105, 7);
+                  margin: 0 0 10px 25px;
+                }
+                > div:nth-child(2) {
+                  width: 60px;
+                  height: 60px;
+                  > img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                >div:last-child{
+                  color: #fff;
                 }
               }
             }

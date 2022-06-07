@@ -12,7 +12,21 @@
           <div><i class="el-icon-phone"></i></div>
         </el-tooltip>
         <i class="el-icon-message"></i>
-        
+        <!-- <el-popover
+    placement="left"
+    width="200"
+    trigger="hover"
+    content="solt">
+    <div slot="reference" class="vx">
+      <img src="../assets/images/vx.svg" alt="">
+    </div>
+  </el-popover> -->
+        <div class="vx">
+          <img class="tu1" src="../assets/images/vx.svg" />
+          <div  class="tu2">
+            <img src="../assets/images/erweima.svg" alt="">
+          </div>
+        </div>
       </div>
     </div>
     <div class="phone">
@@ -29,7 +43,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style lang="scss" scoped>
@@ -42,21 +57,46 @@ export default {};
   box-shadow: 5px 5px 15px gray;
   > div {
     width: 60px;
-    height: 110px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     font-size: 35px;
     justify-content: space-evenly;
     align-items: center;
-    color: #36d;
+    color: #1296db;
   }
   .el-icon-phone {
     transform: rotate(270deg);
-    background-color: #36d;
+    background-color: #1296db;
     color: white;
-    // margin-top: 10px;
     border-radius: 5px;
     font-size: 33px;
+  }
+  .vx .tu1:hover+.tu2{
+    display: block;
+  }
+  .vx {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    background: url(../assets/images/vx.svg) no-repeat cover;
+    > img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+    >div{
+      display: none;
+      position: absolute;
+      left: -120px;
+      top: -25px;
+      width: 100px;
+      height: 100px;
+      >img{
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 .phone {
@@ -72,6 +112,8 @@ export default {};
     justify-content: space-around;
     border-top: 3px solid rgb(234, 234, 234);
     font-size: 18px;
+    position: relative;
+    bottom: 0;
     > div {
       display: flex;
       align-items: center;

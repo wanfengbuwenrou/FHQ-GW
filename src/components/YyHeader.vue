@@ -17,9 +17,11 @@
           text-color="#303133"
           active-text-color="red"
           router
+          v-for="(item, i) in navmenu"
+          :key="i"
         >
-          <el-menu-item index="/index" class="index">首页</el-menu-item>
-          <el-submenu
+          <el-menu-item :index="item.path">{{ item.title }}</el-menu-item>
+          <!-- <el-submenu
             :popper-append-to-body="false"
             v-for="(item, i) in navmenu"
             :key="i"
@@ -33,20 +35,21 @@
             >
               {{ option }}
             </el-menu-item>
-          </el-submenu>
+          </el-submenu> -->
         </el-menu>
       </div>
-      <div class="col-lg-1 col-xs-1 right">请登录</div>
+      <div class="col-lg-1 col-xs-1 right">登录</div>
       <!-- 抽屉 -->
-      <i @click="drawer = true" class="el-icon-s-operation"></i>
+      <i @click="drawer=true" class="el-icon-s-operation"></i>
       <div class="menu2">
-        <el-drawer
+      <el-drawer
           :visible.sync="drawer"
           direction="ttb"
           :modal="false"
           class="drawer"
           :before-close="handleClose"
           :show-close="false"
+          destroy-on-close
         >
           <el-menu
             :default-active="$route.path"
@@ -56,10 +59,12 @@
             text-color="#303133"
             active-text-color="red"
             router
+             v-for="(item, i) in navmenu"
+              :key="i"
           >
-            <el-menu-item index="/index" class="index">首页</el-menu-item>
+            <el-menu-item :index="item.path">{{item.title}}</el-menu-item>
 
-            <el-submenu
+            <!-- <el-submenu
               v-for="(item, i) in navmenu"
               :key="i"
               :index="item.path"
@@ -72,7 +77,7 @@
               >
                 {{ option }}
               </el-menu-item>
-            </el-submenu>
+            </el-submenu> -->
           </el-menu>
         </el-drawer>
       </div>
@@ -86,38 +91,31 @@ export default {
     return {
       drawer: false,
       navmenu: [
+        { title: "首页", path: "/index" },
         {
           title: "软件服务",
           path: "/total/software",
-          options: ["软件开发", "软件出售"],
         },
         {
           title: "人才服务",
           path: "/total/talent",
-          options: ["人才输送", "人才培养"],
         },
         {
           title: "审计服务",
           path: "/total/audit",
-          options: ["审计服务", "审计查账"],
         },
         {
           title: "财税服务",
           path: "/total/financial",
-          options: ["财税服务", "财税服务"],
         },
         {
           title: "资讯服务",
           path: "/incubation",
-          options: ["最新资讯", "资讯政策"],
         },
       ],
     };
   },
-  mounted() {
-    let element = document.querySelector(".el-menu--popup");
-    element.style.minWidth = "120px";
-  },
+  mounted() {},
   methods: {
     handleSelect(key, keyPath) {},
     handleClose(done) {
