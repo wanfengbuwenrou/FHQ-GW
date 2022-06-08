@@ -52,18 +52,30 @@
       </div>
       <yy-footer></yy-footer>
       <back-top></back-top>
+      <div id="container"></div>
     </div>
   </div>
 </template>
 
 <script>
+import AMapLoader from "@amap/amap-jsapi-loader";
 import YyHeader from "@/components/YyHeader.vue";
 import YyFooter from "@/components/YyFooter.vue";
 import BackTop from "@/components/BackTop.vue";
 export default {
   components: { YyHeader, YyFooter, BackTop },
-  data() {
-    return {};
+  mounted () {
+    AMapLoader.load({
+      key: "758a058ea9d1983deedafb8a1a4ed6cb", // 申请好的Web端开发者Key，首次调用 load 时必填
+      version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
+      plugins: [],
+    })
+      .then((AMap) => {
+        this.map = new AMap.Map("container");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   },
 };
 </script>

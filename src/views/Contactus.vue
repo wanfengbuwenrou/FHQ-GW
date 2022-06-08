@@ -41,7 +41,7 @@
       </div>
       <!-- f3 -->
       <div class="f3">
-        <div id="map"></div>
+        <div id="container"></div>
       </div>
       <BackTop></BackTop>
       <!-- 底部 -->
@@ -52,54 +52,52 @@
 
 <script>
 import AMapLoader from "@amap/amap-jsapi-loader";
-window._AMapSecurityConfig = {
-        securityJsCode: "67d50e882e3bd08043755bb5b3a258ef",
-      };
 import YyHeader from "@/components/YyHeader.vue";
 import YyFooter from "@/components/YyFooter.vue";
 import BackTop from "@/components/BackTop.vue";
 export default {
   components: { YyHeader, YyFooter, BackTop },
+  name: "Map",
   data() {
     return {
-        map:null
+      map: null,
     };
   },
+
   mounted() {
-      this.initMap()
-  },
-  methods:{
-    initMap(){
-        AMapLoader.load({
-            key:"758a058ea9d1983deedafb8a1a4ed6cb",           
-            version:"2.0",     
-            plugins:['AMap.Geocoder'],     
-        }).then((AMap)=>{
-             AMap.plugin("AMap.Geocoder", function () {
+       AMapLoader.load({
+        key: "758a058ea9d1983deedafb8a1a4ed6cb", 
+        version: "2.0", 
+        plugins: ["AMap.Geocoder"],
+      })
+        .then((AMap) => {
+          let map = new AMap.Map("container");         
+          // 获得 地理位置信息
+            AMap.plugin("AMap.Geocoder", function () {
               let geocoder = new AMap.Geocoder({
                 city: "",
               });
-              geocoder.getLocation('天津市滨海新区博润广场1号楼', function (status, result) {
-                console.log(result);
+              geocoder.getLocation('天津市滨海隐去博润商务1号楼', function (status, result) {
                 let lng = result.geocodes[0].location.lng;
                 let lat = result.geocodes[0].location.lat;
-                console.log(lng);
-                console.log(lat);
                 showMap(lng, lat);
               });
             });
-            function showMap(lng, lat) {
-            var map = new AMap.Map("map", {
-              zoom: 13, //级别
-              center: [lng, lat], //中心点坐标
-              viewMode: "3D", //使用3D视图
+          function showMap(lng, lat) {
+            var map = new AMap.Map("container", {
+              zoom: 13, 
+              center: [lng, lat], 
+              viewMode: "3D", 
             });
           }
-        }).catch(e=>{
-            console.log(e);
         })
-    },
-},
+        .catch((e) => {
+          console.log(e);
+        });
+  },
+  destroy () {
+    map.destroy();
+  },
 
 };
 </script>

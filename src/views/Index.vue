@@ -77,7 +77,6 @@
                     </div>
                     <div>技术咨询</div>
                     <div></div>
-
                   </router-link>
                 </div>
                 <div>
@@ -87,7 +86,6 @@
                     </div>
                     <div>人才推荐</div>
                     <div></div>
-
                   </router-link>
                 </div>
                 <div>
@@ -97,7 +95,6 @@
                     </div>
                     <div>财税咨询</div>
                     <div></div>
-
                   </router-link>
                 </div>
               </div>
@@ -224,6 +221,7 @@
     <!-- 底部简介 -->
     <yy-footer></yy-footer>
     <BackTop></BackTop>
+    <div id="container"></div>
   </div>
 </template>
 
@@ -232,6 +230,7 @@ import YySwiper from "@/components/YySwiper.vue";
 import YyFooter from "@/components/YyFooter.vue";
 import YyHeader from "@/components/YyHeader.vue";
 import BackTop from "@/components/BackTop.vue";
+import AMapLoader from "@amap/amap-jsapi-loader";
 
 export default {
   components: { YySwiper, YyFooter, YyHeader, BackTop },
@@ -274,7 +273,20 @@ export default {
       ],
     };
   },
-  mounted() {},
+  mounted() {
+    // 配置地图
+    AMapLoader.load({
+      key: "758a058ea9d1983deedafb8a1a4ed6cb", // 申请好的Web端开发者Key，首次调用 load 时必填
+      version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
+      plugins: [],
+    })
+      .then((AMap) => {
+        this.map = new AMap.Map("container");
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  },
   methods: {
     goaboutme() {
       this.$router.push("/aboutme");
